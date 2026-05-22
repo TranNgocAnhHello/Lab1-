@@ -3,7 +3,7 @@
   width: 420px;
   margin: 60px auto;
   border-radius: 20px;
-  background: #fff;
+  background: #585555;
   box-shadow:
     0 4px 24px rgba(0, 0, 0, 0.08),
     0 1px 4px rgba(0, 0, 0, 0.04);
@@ -67,7 +67,7 @@
 .student-name {
   font-size: 24px;
   font-weight: 700;
-  color: #1e293b;
+  color: #f1f6ff;
   margin: 12px 0 8px;
   transition: color 0.3s ease;
 }
@@ -201,7 +201,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: #94a3b8;
+  color: #acbb88;
   margin: 0 0 10px;
 }
 
@@ -216,9 +216,9 @@
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 20px;
-  color: #cc3131;
+  color: #ffffff;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.12));
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(255, 102, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   cursor: default;
 }
@@ -229,39 +229,39 @@
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.18), rgba(118, 75, 162, 0.2));
 }
 
-/* 💡 ── Cấu hình thay đổi khi bật DARK MODE ── */
+
 .card.dark {
-  background: #1e293b; /* Đổi màu nền Card sang xám tối */
+  background: #1e293b;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .card.dark .avatar {
-  border-color: #1e293b; /* Đổi viền trắng avatar tiệp với nền tối */
+  border-color: #1e293b;
 }
 
 .card.dark .status-dot {
-  border-color: #1e293b; /* Đổi viền chấm trạng thái trên avatar */
+  border-color: #1e293b;
 }
 
 .card.dark .student-name {
-  color: #f8fafc; /* Chuyển tên học sinh sang màu chữ trắng sáng */
+  color: #f8fafc;
 }
 
-/* Ô thông tin chi tiết (Info Items) */
+
 .card.dark .info-item {
-  background: #0f172a; /* Nền ô thông tin tối hơn nền Card */
-  border-color: #334155; /* Đổi màu viền ô thông tin */
+  background: #0f172a;
+  border-color: #334155;
 }
 
 .card.dark .info-label {
-  color: #f87171; /* Chuyển chữ "Student ID, Class, Major" sang màu đỏ neon dịu nhẹ cho đỡ chói */
+  color: #f87171;
 }
 
 .card.dark .info-value {
-  color: #cbd5e1; /* Chuyển giá trị thông tin sang màu xám trắng */
+  color: #cbd5e1;
 }
 
-/* Nút chuyển đổi giao diện (Theme Button) */
+
 .card.dark .theme-button {
   color: #f1f5f9;
   background: #334155;
@@ -272,10 +272,10 @@
   background: #475569;
 }
 
-/* Các nhãn sở thích (Hobby Tags) */
+
 .card.dark .hobby-tag {
-  color: #f87171; /* Chữ sở thích sáng lên */
-  background: rgba(248, 113, 113, 0.1); /* Nền sở thích chuyển sang màu đỏ tối trong suốt */
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
   border-color: rgba(248, 113, 113, 0.25);
 }
 

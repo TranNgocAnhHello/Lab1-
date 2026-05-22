@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import avatarImg from './assets/avatar.jpg'
+import Button from './components/Button.jsx'
+import Info from './components/Info.jsx'
+import Hobbies from './components/Hobbies.jsx'
 import './App.css'
 
 const student = {
@@ -41,55 +44,25 @@ function App() {
             <div className="card-body">
                 <h1 className="student-name">{student.fullName}</h1>
 
-                <div className="button-group">
-                    <button 
-                        className={`status-badge ${isOnline ? 'online' : 'offline'}`} 
-                        onClick={handleStatusClick}
-                    >
-                        {isOnline ? 'Online' : 'Offline'}
-                    </button>
+                <Button
+                    isOnline={isOnline} 
+                    onStatusClick={handleStatusClick}
+                    likes={likes}
+                    onLikeClick={handleLikeClick}
+                    isDarkMode={isDarkMode}
+                    onThemeClick={handleThemeClick}
+                />
 
-                    <button 
-                        className="like-button" 
-                        onClick={handleLikeClick}
-                    >
-                        Likes: {likes}
-                    </button>
+                <Info
+                    studentId={student.studentId}
+                    className={student.className}
+                    major={student.major}
+                />
 
-                    <button 
-                        className="theme-button" 
-                        onClick={handleThemeClick}
-                    >
-                        {isDarkMode ? 'Light' : 'Dark'}
-                    </button>
-                </div>
-
-                <div className="info-grid">
-                    <div className="info-item">
-                        <span className="info-label">Student ID</span>
-                        <span className="info-value">{student.studentId}</span>
-                    </div>
-                    <div className="info-item">
-                        <span className="info-label">Class</span>
-                        <span className="info-value">{student.className}</span>
-                    </div>
-                    <div className="info-item full-width">
-                        <span className="info-label">Major</span>
-                        <span className="info-value">{student.major}</span>
-                    </div>
-                </div>
-
-                <div className="hobbies-section">
-                    <h2 className="hobbies-title">Hobbies</h2>
-                    <div className="hobbies-list">
-                        {student.hobbies.map(function (hobby, index) {
-                            return <span key={index} className="hobby-tag">{hobby}</span>
-                        })}
-                    </div>
-                </div>
+                <Hobbies hobbiesList={student.hobbies} />
             </div>
         </div>
     )
 }
 
-export default App
+export default App 
